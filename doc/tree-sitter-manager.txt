@@ -116,12 +116,13 @@ languages ~
 ------------------------------------------------------------------------------
                                     *tree-sitter-manager-opt-ensure_installed*
 ensure_installed ~
-  Type: `string[]`
+  Type: `string[]|string`
   Default: `{}`
 
   List of parsers to install automatically at startup (if not already
-  installed). >lua
+  installed). If set to `"all"`, install all parsers. >lua
     ensure_installed = { "lua", "python", "rust" },
+    ensure_installed = "all",
 <
 
 ------------------------------------------------------------------------------

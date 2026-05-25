@@ -8,7 +8,7 @@ local datapath = vim.fn.stdpath("data")
 ---@field parser_dir? string Directory to install compiled parsers into. Defaults to `stdpath('data')/site/parser`.
 ---@field query_dir? string Directory to install query files into. Defaults to `stdpath('data')/site/queries`.
 ---@field languages? table<string, string|tree-sitter-manager.LanguageSpec> User-defined language repos to use instead of the built-in ones. Can either be a string (a git URL), or a more detailed LanguageSpec.
----@field ensure_installed? string[] Languages to install on `setup()` if not already present.
+---@field ensure_installed? string|string[] Languages to install on `setup()` if not already present. Use `"all"` to install all languages.
 ---@field border? string|string[] Border style passed to `nvim_open_win` for the manager UI.
 ---@field auto_install? boolean Install missing parsers automatically on `FileType`.
 ---@field highlight? boolean|string[] Enable `vim.treesitter.start()` for installed parsers. `true` enables all, or pass a list of languages.
